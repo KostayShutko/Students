@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\ViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +69,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\DefaultDialogService.cs" />
+    <Compile Include="Model\ICommand.cs" />
+    <Compile Include="Model\IDialogService.cs" />
+    <Compile Include="Model\IFileService.cs" />
+    <Compile Include="Model\RelayCommand.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\Students.cs" />
+    <Compile Include="Model\XmlFileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,5 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

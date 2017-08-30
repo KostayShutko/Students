@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Students.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,22 @@ namespace Students
         public MainWindow()
         {
             InitializeComponent();
+            DataContext =new ViewModel.ViewModel(new DefaultDialogService(), new XmlFileService());
+        }
+
+        private void CreateStudent_Click(object sender, RoutedEventArgs e)
+        {
+            FormStudent.Visibility = Visibility.Visible;
+        }
+
+        private void SaveStudent_Click(object sender, RoutedEventArgs e)
+        {
+            FormStudent.Visibility = Visibility.Hidden;
+        }
+
+        private void CancelStudent_Click(object sender, RoutedEventArgs e)
+        {
+            FormStudent.Visibility = Visibility.Hidden;
         }
     }
 }
